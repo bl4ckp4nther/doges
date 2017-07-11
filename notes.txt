@@ -1,0 +1,101 @@
+**INSTALLATION**
+sudo apt-get install git-core
+
+**CONFIGURING USERNAME AND EMAIL**
+git config --global user.name "bl4ckp4nther"
+git config --global user.email "divyanshus2396@gmail.com"
+
+**LIST CONFIGURATION SETTINGS**
+git config --list
+git config user.name
+
+**GETTING HELP**
+git help
+git help commit
+
+**HOME**
+cd ~
+**Going back in directory**
+cd ../..
+
+**INITIALIZE GIT PROJECT**
+git init
+
+**ls HIDDEN FILES**
+ls -la
+
+**ADD ALL THE CHANGES THAT WE MADE TO OUR PROJECT**
+git add .
+
+**commit-taking a screenshot in time**
+git commit -m "This is my first commit"
+
+**VIEW COMMIT HISTORY**
+git log
+
+**view commits from a certain person**
+git log --author="bl4ckp4nther"
+
+**new,modified,untracked files,changes to be committed**
+git status
+
+
+**Add particular files to staging area**
+git add second.txt
+
+**VIEW THE DIFF BTW WORKING & COPY REPO COPY**
+git diff
+
+**DIFF BTW STAGING & REPO**
+diff shows diff btw working & repo copy only
+git diff --staged
+
+**delete and snapshot(commit) xD**
+git rm third.txt
+removes files from the staging area as well as the working copy
+then commit after that
+
+**011_Renaming_Files**
+METHODS:
+01	If i rename a file then git status
+it thinks we deleted the original file and sees the 		edited file as a  new untracked file
+first -> home
+BUT
+git add home.txt
+git rm 'first.txt'
+Now git gets to know that we renamed first to home
+
+02	git mv second.txt pudding.txt
+
+**working with an actual project**
+cd to the folder, init, add ., and then commit
+
+****
+working to repo directly w/o adding to staging
+git commit -am ""
+commits all file in working copy-disadv
+
+****
+git checkout -- index.html
+take index.html from the repo and replace working copy with it, in case somebody messed with it
+
+**unstage files**
+git reset HEAD index.html
+
+**getting old versions frm repo**
+get a copy of the last gud version
+git log
+abcde be the first 5 characters of the commit id of d last gud version
+then
+git checkout abcde -- index.html
+
+**GitHub**
+create a new repo
+add a remote to that repo
+git remote add pointer "repo_url"
+push - pushing changes to github
+fetching - fetching files from github
+git push -u gonzos master
+-u => all files
+
+
